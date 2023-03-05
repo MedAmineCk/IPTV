@@ -1,0 +1,24 @@
+section.about {
+    h1 {
+        font-size: 65px;
+        color: colors(sec);
+    }
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        .img {
+            max-width: 600px;
+            border-radius: 40px;
+            overflow: hidden;
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            font-size: 35px;
+        }
+    }
+}

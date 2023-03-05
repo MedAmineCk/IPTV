@@ -1,0 +1,74 @@
+$colors: (
+  full_bg: #fff,
+  bg: #fff,
+  sec: #ff0000,
+  third: #8103ff,
+  text: rgba(255, 255, 255, 0.8),
+  label: rgba(170, 220, 231, 0.8),
+  p: #880e4f,
+  orange: #ff8a00,
+);
+$whites: (
+  0.8: rgba(255, 255, 255, 0.8),
+  0.6: rgba(255, 255, 255, 0.6),
+  0.4: rgba(255, 255, 255, 0.4),
+  0.2: rgba(255, 255, 255, 0.2),
+  0.02: rgba(255, 255, 255, 0.02),
+);
+$icons: (
+  tailwind: #38b2ac,
+  react: #61dafb,
+  sass: #cb6699,
+  php: #6181b6,
+  mysql: #00618a,
+  js: #f0db4f,
+  figma: #a159fe,
+);
+$medias: (
+  facebook: #1877f2,
+  whatsapp: #25d366,
+  instagram: #e4405f,
+);
+$padding: 10px;
+$border: 1px solid #607d8b;
+$border-radius: 4px;
+$gradient: radial-gradient(49.49% 260.63% at 48.33% 50.51%, #ff8a00 0%, #e52e71 100%);
+$shadow: -4px -4px 12px rgba(217, 217, 217, 0.05), 4px 4px 12px rgba(0, 0, 0, 0.15);
+$Roboto: "Roboto", sans-serif;
+$Ubuntu: "Ubuntu", sans-serif;
+$Varela: "Varela Round", sans-serif;
+
+@function colors($color-name) {
+  @return map-get($map: $colors, $key: $color-name);
+}
+
+@function whites($color-name) {
+  @return map-get($map: $whites, $key: $color-name);
+}
+
+@function icons($color-name) {
+  @return map-get($map: $icons, $key: $color-name);
+}
+
+@function medias($color-name) {
+  @return map-get($map: $medias, $key: $color-name);
+}
+$tablet: 1134px;
+$mobile: 500px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+//******** Fonts ********//
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;700");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap");

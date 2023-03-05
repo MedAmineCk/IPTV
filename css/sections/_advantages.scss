@@ -1,0 +1,19 @@
+section.advantages {
+    margin-bottom: 80px;
+    .flex-content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .item {
+        text-align: center;
+        .icon span {
+            font-size: 100px;
+            color: colors(sec);
+        }
+        .label {
+            font-weight: bolder;
+            font-family: "Cairo", sans-serif;
+        }
+    }
+}

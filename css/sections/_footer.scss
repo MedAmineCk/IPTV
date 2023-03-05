@@ -1,0 +1,49 @@
+footer .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    ul {
+        display: flex;
+        list-style: none;
+        li {
+            margin: 0 10px;
+        }
+    }
+
+    span.copyright {
+        font-size: 10px;
+        color: blacks(80%);
+    }
+    .social_media {
+        display: flex;
+        .item {
+            $_size: 45px;
+            width: $_size;
+            height: $_size;
+            border-radius: $_size;
+            margin: 0 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                $img_size: $_size - 20px;
+                max-width: $img_size;
+                max-height: $img_size;
+            }
+
+            &.facebook {
+                background: medias(facebook);
+            }
+            &.whatsapp {
+                background: medias(whatsapp);
+            }
+            &.instagram {
+                background: medias(instagram);
+            }
+        }
+    }
+}
