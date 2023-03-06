@@ -1,0 +1,115 @@
+section.plans {
+    padding-top: 40px;
+    background-image: url(/img/istockphoto-469783940-612x612\ 1.png);
+    background-size: cover;
+    position: relative;
+    max-height: 500px;
+    margin-bottom: 580px;
+    display: block;
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        background: colors(third);
+        inset: 0;
+        opacity: 0.2;
+    }
+    .titel_label {
+        color: #fff;
+        font-size: 34px;
+        font-family: "Cairo", sans-serif;
+        font-weight: bolder;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 3;
+    }
+    .flex-container {
+        display: block;
+        justify-content: center;
+    }
+
+    .plan-item {
+        width: 100%;
+        height: fit-content;
+        border-radius: 12px;
+        position: relative;
+        z-index: 3;
+        background: #fff;
+        border: 2px solid colors(third);
+        margin-bottom: 20px;
+        overflow: hidden;
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+        .price {
+            background: colors(third);
+            color: #fff;
+            height: 80px;
+            width: 80%;
+            padding-right: 20px;
+            border-radius: 0 20px 20px 0;
+            position: relative;
+            left: -20%;
+            margin-bottom: 20px;
+            .money {
+                font-size: 34px;
+            }
+            .duration {
+                position: relative;
+                left: -100px;
+            }
+        }
+        .content {
+            margin-bottom: 20px;
+            .item {
+                display: flex;
+                align-items: center;
+                .icon {
+                    $size: 50px;
+                    width: $size;
+                    height: $size;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: colors(third);
+                }
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            position: relative;
+            right: 50%;
+            transform: translateX(50%);
+            background: #fff;
+            border: 2px solid colors(third);
+            color: colors(third);
+            transition: all linear 0.2s;
+
+            &:hover {
+                background: colors(third);
+                color: #fff;
+                box-shadow: 0px 0px 10px colors(third);
+            }
+        }
+        .image-container {
+            display: none;
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

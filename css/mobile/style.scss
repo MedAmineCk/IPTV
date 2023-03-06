@@ -1,12 +1,11 @@
-@import "./variables";
-@import "./default";
-@import "./module";
+@import "../variables";
+@import "../default";
 @import "./sections/header";
 @import "./sections/cover";
 @import "./sections/about";
-@import "./sections/projects";
+@import "./sections/plans";
+@import "./sections/advantages";
 @import "./sections/testimonial";
-@import "./sections/scripts";
 @import "./sections/footer";
 
 @include mobile() {
@@ -17,41 +16,41 @@ body {
   height: 100%;
   position: relative;
   background: colors(full_bg);
+  direction: rtl;
+  font-family: $Ubuntu;
 
-  .main-container {
-    width: 100%;
-    max-width: 1280px;
-    height: 100%;
+  h1 {
+    font-family: "Cairo", sans-serif;
+  }
+
+  .container {
+    max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    text-align: right;
     position: relative;
   }
 
-  section {
+  section,
+  footer {
     width: 100%;
+  }
 
-    &.about,
-    &.works {
-      $bg_color: colors(full_bg);
-      background: $bg_color;
-
-      aside {
-        .label {
-          background: $bg_color;
-        }
-      }
-    }
-
-    &.cover,
-    &.testimonial,
-    &.news {
-      $bg_color: colors(bg);
-      background: $bg_color;
-
-      aside {
-        .label {
-          background: $bg_color;
-        }
-      }
-    }
+  .card {
+    background: #fff;
+    width: 800px;
+    height: 160px;
+    border-radius: 200px;
+    position: relative;
+    top: -80px;
+    z-index: 3;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 4px solid #fdeeff;
+    box-shadow: 0px 4px 8px #fbdcff;
+    display: none;
   }
 }

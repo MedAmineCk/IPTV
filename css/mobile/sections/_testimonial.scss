@@ -1,4 +1,5 @@
 section.testimonial {
+    display: block;
     padding-top: 40px;
     background-image: url(/img/istockphoto-469783940-612x612\ 1.png);
     background-size: cover;
@@ -21,7 +22,7 @@ section.testimonial {
     }
     .titel_label {
         color: #fff;
-        font-size: 64px;
+        font-size: 34px;
         font-family: "Cairo", sans-serif;
         font-weight: bolder;
     }
@@ -29,15 +30,15 @@ section.testimonial {
     .hr_lable {
         margin-right: 80px;
         margin-top: 20px;
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .comment_preview {
-        width: 600px;
+        width: 100%;
         margin: 0 auto;
         margin-top: 20px;
         border-radius: 12px;
-        padding: 40px;
+        padding: 20px;
         background: #fff;
 
         .rating {
@@ -59,7 +60,7 @@ section.testimonial {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
             font-family: "El Messiri", sans-serif;
         }

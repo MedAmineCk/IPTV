@@ -1,0 +1,29 @@
+section.about {
+    display: block;
+    h1 {
+        font-size: 34px;
+        color: colors(sec);
+    }
+    .flex-container {
+        .img {
+            display: none;
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            .icon {
+                $size: 45px;
+                width: $size;
+                height: $size;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

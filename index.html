@@ -19,7 +19,8 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" media="screen and (min-width: 768px)">
+  <link rel="stylesheet" href="css/mobile/style.css" media="screen and (max-width: 767px)">
 
   <meta name="theme-color" content="#fafafa">
 
@@ -46,6 +47,11 @@
           <a href="#">راسلنا</a>
           <a href="#">كيف؟</a>
         </nav>
+        <div class="nav_tab_icon">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
       </div>
     </header>
     <section class="cover">
@@ -53,7 +59,11 @@
 
         <h1>تمتع بمشاهدة <span>اروع البرامج</span> و الافلام
           بجودة عالية عبر سيرفراتنا <span>المجانية</span></h1>
-
+        <p>اختر احد الباقات المجانية، اتمم المهمة، احصل على سيرفر خاص بك مجانا</p>
+        <div class="buttons-container">
+          <button class="main-btn">الباقة المجانية</button>
+          <button class="more">معرفة المزيد</button>
+        </div>
       </div>
     </section>
     <div class="card">
@@ -69,33 +79,51 @@
           <div class="content">
             <div class="item">
               <div class="icon">
-                <img src="/img/diamond (1) 1.png" alt="">
+                <span class="material-symbols-outlined">
+                  diamond
+                </span>
               </div>
               <p>افلام عربية و اجنبية</p>
             </div>
             <div class="item">
               <div class="icon">
-                <img src="/img/diamond (1) 1.png" alt="">
+                <span class="material-symbols-outlined">
+                  diamond
+                </span>
               </div>
-              <p>افلام عربية و اجنبية</p>
+              <p>برامج رمضانية</p>
             </div>
             <div class="item">
               <div class="icon">
-                <img src="/img/diamond (1) 1.png" alt="">
+                <span class="material-symbols-outlined">
+                  diamond
+                </span>
               </div>
-              <p>افلام عربية و اجنبية</p>
+              <p>اكثر من 10،000 قناة تلفزية</p>
             </div>
             <div class="item">
               <div class="icon">
-                <img src="/img/diamond (1) 1.png" alt="">
+                <span class="material-symbols-outlined">
+                  diamond
+                </span>
               </div>
-              <p>افلام عربية و اجنبية</p>
+              <p>جودة عالية FH and 4k</p>
             </div>
             <div class="item">
               <div class="icon">
-                <img src="/img/diamond (1) 1.png" alt="">
+                <span class="material-symbols-outlined">
+                  diamond
+                </span>
               </div>
-              <p>افلام عربية و اجنبية</p>
+              <p>يدعم جميع الاجهزة</p>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <span class="material-symbols-outlined">
+                  diamond
+                </span>
+              </div>
+              <p>خوادم مستقرة</p>
             </div>
           </div>
           <div class="img">
@@ -105,95 +133,98 @@
       </div>
     </section>
     <section class="plans">
-      <div class="container flex-container">
-        <div class="plan-item">
-          <h1>باقة عادية</h1>
-          <div class="price">
-            <div class="money">0.00 $</div>
-            <div class="duration">مدى الحياة</div>
-          </div>
-          <div class="content">
-            <div class="item">
-              <div class="icon">
-                <span class="material-symbols-outlined">
-                  done
-                </span>
-              </div>
-              <p>قنوات عربية و اجنبية بجودة 4k</p>
+      <div class="container">
+        <div class="titel_label">العروض المجانية</div>
+        <div class="flex-container">
+          <div class="plan-item">
+            <h1>باقة عادية</h1>
+            <div class="price">
+              <div class="money">0.00 $</div>
+              <div class="duration">مدى الحياة</div>
             </div>
-            <div class="item">
-              <div class="icon">
-                <span class="material-symbols-outlined">
-                  done
-                </span>
+            <div class="content">
+              <div class="item">
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                    done
+                  </span>
+                </div>
+                <p>قنوات عربية و اجنبية بجودة 4k</p>
               </div>
-              <p>سيرفرات سريعة و مستقرة</p>
+              <div class="item">
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                    done
+                  </span>
+                </div>
+                <p>سيرفرات سريعة و مستقرة</p>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                    done
+                  </span>
+                </div>
+                <p>دعم متواصل</p>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                    done
+                  </span>
+                </div>
+                <p>مجانا و للابد</p>
+              </div>
             </div>
-            <div class="item">
-              <div class="icon">
-                <span class="material-symbols-outlined">
-                  done
-                </span>
-              </div>
-              <p>دعم متواصل</p>
-            </div>
-            <div class="item">
-              <div class="icon">
-                <span class="material-symbols-outlined">
-                  done
-                </span>
-              </div>
-              <p>مجانا و للابد</p>
-            </div>
-          </div>
-          <button>اختر هذه الباقة</button>
-          <div class="image-container">
-            <img src="/img/free.png" alt="">
-          </div>
-        </div>
-        <div class="plan-item">
-          <h1>باقة عادية</h1>
-          <div class="price">
-            <div class="money">0.00 $</div>
-            <div class="duration">مدى الحياة</div>
-          </div>
-          <div class="content">
-            <div class="item">
-              <div class="icon">
-                <span class="material-symbols-outlined">
-                  done
-                </span>
-              </div>
-              <p>قنوات عربية و اجنبية بجودة 4k</p>
-            </div>
-            <div class="item">
-              <div class="icon">
-                <span class="material-symbols-outlined">
-                  done
-                </span>
-              </div>
-              <p>سيرفرات سريعة و مستقرة</p>
-            </div>
-            <div class="item">
-              <div class="icon">
-                <span class="material-symbols-outlined">
-                  done
-                </span>
-              </div>
-              <p>دعم متواصل</p>
-            </div>
-            <div class="item">
-              <div class="icon">
-                <span class="material-symbols-outlined">
-                  done
-                </span>
-              </div>
-              <p>مجانا و للابد</p>
+            <button>اختر هذه الباقة</button>
+            <div class="image-container">
+              <img src="/img/free.png" alt="">
             </div>
           </div>
-          <button>اختر هذه الباقة</button>
-          <div class="image-container">
-            <img src="/img/free.png" alt="">
+          <div class="plan-item">
+            <h1>باقة عادية</h1>
+            <div class="price">
+              <div class="money">0.00 $</div>
+              <div class="duration">مدى الحياة</div>
+            </div>
+            <div class="content">
+              <div class="item">
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                    done
+                  </span>
+                </div>
+                <p>قنوات عربية و اجنبية بجودة 4k</p>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                    done
+                  </span>
+                </div>
+                <p>سيرفرات سريعة و مستقرة</p>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                    done
+                  </span>
+                </div>
+                <p>دعم متواصل</p>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                    done
+                  </span>
+                </div>
+                <p>مجانا و للابد</p>
+              </div>
+            </div>
+            <button>اختر هذه الباقة</button>
+            <div class="image-container">
+              <img src="/img/free.png" alt="">
+            </div>
           </div>
         </div>
       </div>
@@ -316,6 +347,18 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <script src="js/testimonial.js"></script>
+
+  <script>
+    //switch to js files according to device (desk, mobile)
+    if (screen && screen.width < 767) {
+      document.write('<script type="text/javascript" src="js/mobile.js"><\/script>');
+    }
+
+    //hide preloader
+    $(window).ready(function () {
+      $('.preloader-container').fadeOut('slow');
+    });
+  </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
