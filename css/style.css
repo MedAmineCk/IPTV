@@ -149,7 +149,7 @@ section.cover {
   max-height: 650px;
   padding: 140px 140px 0 140px;
   color: white;
-  background-image: url(../../img/cover.png);
+  background-image: url(../img/cover.png);
   background-size: cover;
   position: relative;
 }
@@ -226,7 +226,7 @@ section.about .flex-container .item {
 
 section.plans {
   padding-top: 100px;
-  background-image: url(../../img/istockphoto-469783940-612x612\ 1.png);
+  background-image: url(../img/istockphoto-469783940-612x612\ 1.png);
   background-size: cover;
   position: relative;
   max-height: 500px;

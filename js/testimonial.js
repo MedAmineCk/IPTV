@@ -3,7 +3,7 @@ const recommendations = [
   {
     id: 1,
     referee: "سارة",
-    profile: "/img/referees/profile_1.jpeg",
+    profile: "./img/referees/profile_1.jpeg",
     recommendation: `
     اشكر صاحب الموقع على الباقة المجانية، كما اشكر فريق الدعم على التواصل الدائم`,
     role: "أستاذة",
@@ -11,14 +11,14 @@ const recommendations = [
   {
     id: 2,
     referee: "نور",
-    profile: "/img/referees/profile_2.jpeg",
+    profile: "./img/referees/profile_2.jpeg",
     recommendation: `لم اكن اتوقع ان هناك موقع يوفر باقات مجانية، حتى تصادفت مع هاد الموقع، الموقع موثوق فعند انتهائك من المهمة البصيطة يرسلون لك الباقة فورا`,
     role: "ممرضة",
   },
   {
     id: 3,
     referee: "ابراهيم احمد",
-    profile: "/img/referees/profile_3.jpeg",
+    profile: "./img/referees/profile_3.jpeg",
     recommendation: `شكرا على الباقات المجانية، قنوات كثيرة و بجودة عالية و بدون تقطع، و الله روعة`,
     role: "مقاول",
   },
