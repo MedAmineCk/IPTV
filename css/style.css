@@ -186,6 +186,21 @@ section.cover .container p {
   font-size: 32px;
   color: rgba(255, 255, 255, 0.6);
 }
+section.cover .container .buttons-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+section.cover .container .buttons-container button {
+  padding: 10px 20px;
+}
+section.cover .container .buttons-container button.main-btn {
+  background: #ff0000;
+  color: #fff;
+}
+section.cover .container .buttons-container button.more {
+  background: #fff;
+}
 
 section.about h1 {
   font-size: 65px;

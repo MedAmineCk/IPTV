@@ -44,5 +44,22 @@ section.cover {
             font-size: 32px;
             color: whites(0.6);
         }
+
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+
+            button {
+                padding: 10px 20px;
+                &.main-btn {
+                    background: colors(sec);
+                    color: #fff;
+                }
+                &.more {
+                    background: #fff;
+                }
+            }
+        }
     }
 }
