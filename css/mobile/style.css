@@ -236,7 +236,7 @@ section.cover {
   height: 100vh;
   max-height: 650px;
   color: white;
-  background-image: url(/img/cover.png);
+  background-image: url(../../img/cover.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -320,7 +320,7 @@ section.about .flex-container .item .icon {
 
 section.plans {
   padding-top: 40px;
-  background-image: url(/img/istockphoto-469783940-612x612\ 1.png);
+  background-image: url(../../img/istockphoto-469783940-612x612\ 1.png);
   background-size: cover;
   position: relative;
   max-height: 500px;
@@ -458,7 +458,7 @@ section.advantages .item .label {
 section.testimonial {
   display: block;
   padding-top: 40px;
-  background-image: url(/img/istockphoto-469783940-612x612\ 1.png);
+  background-image: url(../../img/istockphoto-469783940-612x612\ 1.png);
   background-size: cover;
   position: relative;
 }
