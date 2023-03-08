@@ -39,39 +39,47 @@
   <main class="main-container">
     <header>
       <div class="container">
-        <div class="logo">
-          <img src="./img/logo.png" alt="logo">
+        <div class="nav_tab_icon">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
         </div>
         <nav>
           <a href="#">منتوجات</a>
           <a href="#">راسلنا</a>
           <a href="#">كيف؟</a>
         </nav>
-        <div class="nav_tab_icon">
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
+        <div class="logo">
+          <img src="./img/logo.png" alt="logo">
         </div>
       </div>
     </header>
     <section class="cover">
+      <div class="bg-slideShow_animation">
+        <div class="front"
+          style="background-image: url('https://ik.imagekit.io/medamineck/iptv/img__7__EamUJqyuP.jpg')"></div>
+        <div class="back"></div>
+      </div>
       <div class="container">
-
-        <h1>تمتع بمشاهدة <span>اروع البرامج</span> و الافلام
-          بجودة عالية عبر سيرفراتنا <span>المجانية</span></h1>
+        <h1>تمتع بمشاهدة <span class="span1">اروع البرامج</span> و الافلام
+          بجودة عالية عبر سيرفراتنا <span class="span2">المجانية</span></h1>
         <p>اختر احد الباقات المجانية، اتمم المهمة، احصل على سيرفر خاص بك مجانا</p>
         <div class="buttons-container">
-          <button class="main-btn">الباقة المجانية</button>
+          <button class="main-btn">احصل على باقتك الآن</button>
           <button class="more">معرفة المزيد</button>
+        </div>
+        <div class="icon-container">
+          <div class="object">
+            <span class="material-symbols-outlined">
+              mouse
+            </span>
+            <span class="material-symbols-outlined">
+              expand_more
+            </span>
+          </div>
         </div>
       </div>
     </section>
-    <div class="card">
-      <img src="./img/Android_TV-Logo 1.png" alt="">
-      <img src="./img/windows-logo-mygalaxy-view-singularlogic-6 (Custom) 1.png" alt="">
-      <img src="./img/apple-tv-logo (Custom) 1.png" alt="">
-      <img src="./img/Amazon_Fire_TV_Stick_logo (Custom) 1.png" alt="">
-    </div>
     <section class="about">
       <div class="container">
         <h1>على مادا ستحصل؟</h1>
@@ -126,10 +134,19 @@
               <p>خوادم مستقرة</p>
             </div>
           </div>
-          <div class="img">
-            <img src="./img/istockphoto-1161386480-612x612 1.png" alt="">
+          <div class="thumbnail">
+            <div class="img">
+              <img src="./img/istockphoto-1161386480-612x612 1.png" alt="">
+            </div>
+            <div class="card">
+              <img src="./img/Android_TV-Logo 1.png" alt="">
+              <img src="./img/windows-logo-mygalaxy-view-singularlogic-6 (Custom) 1.png" alt="">
+              <img src="./img/apple-tv-logo (Custom) 1.png" alt="">
+              <img src="./img/Amazon_Fire_TV_Stick_logo (Custom) 1.png" alt="">
+            </div>
           </div>
         </div>
+        <button class="main-btn">احصل على باقتك الآن</button>
       </div>
     </section>
     <section class="plans">
@@ -347,6 +364,7 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <script src="js/testimonial.js"></script>
+  <script src="js/bg_images_animation.js"></script>
 
   <script>
     //switch to js files according to device (desk, mobile)

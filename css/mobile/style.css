@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;700");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
 }
 
 .absolute_center {
@@ -73,7 +73,7 @@ header .nav_tab_icon {
   height: 50px;
   position: absolute;
   z-index: 3;
-  top: 0px;
+  top: 20px;
   left: 10px;
 }
 header .nav_tab_icon .item {
@@ -116,6 +116,7 @@ header .logo {
 }
 header .logo img {
   max-width: 100%;
+  padding: 10px;
 }
 header nav {
   display: none;
@@ -254,6 +255,18 @@ section.cover::before {
   inset: 0;
   opacity: 0.2;
 }
+section.cover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  z-index: 9;
+  background: url(../../img/Vector\ 1.svg);
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+}
 section.cover .container {
   position: relative;
   z-index: 2;
@@ -265,10 +278,12 @@ section.cover .container h1 {
   font-size: 34px;
   color: #fff;
 }
-section.cover .container h1 span {
-  background: radial-gradient(49.49% 260.63% at 48.33% 50.51%, #ff8a00 0%, #e52e71 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+section.cover .container h1 span.span1 {
+  background-image: url(../../img/span1.svg);
+}
+section.cover .container h1 span.span2 {
+  background-image: url(../../img/span2.svg);
+  color: #000;
 }
 section.cover .container p {
   font-style: normal;
@@ -291,13 +306,51 @@ section.cover .container .buttons-container button.main-btn {
 section.cover .container .buttons-container button.more {
   background: #fff;
 }
+section.cover .container .icon-container {
+  margin: 0 auto;
+  margin-top: 40px;
+}
+section.cover .container .icon-container .object {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scrollDownArrow 2s infinite;
+}
+section.cover .container .icon-container .object span:first-child {
+  font-size: 45px;
+}
+section.cover .container .icon-container .object span:nth-child(2) {
+  position: relative;
+  top: -4px;
+}
 
+@keyframes scrollDownArrow {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
 section.about {
   display: block;
+  padding-bottom: 40px;
 }
 section.about h1 {
   font-size: 34px;
   color: #ff0000;
+  background: radial-gradient(49.49% 260.63% at 48.33% 50.51%, #ff8a00 0%, #e52e71 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section.about .flex-container {
+  padding-bottom: 20px;
 }
 section.about .flex-container .img {
   display: none;
@@ -316,6 +369,35 @@ section.about .flex-container .item .icon {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+section.about .flex-container .item .icon span {
+  font-size: 35px;
+  color: gold;
+}
+section.about button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 24px;
+  margin: 0 auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+section.about button.main-btn {
+  background: gold;
+  color: #000;
+}
+section.about button.more {
+  background: #ff0000;
+  color: #fff;
+}
+section.about .card {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section.about .card img {
+  max-width: 80px;
 }
 
 section.plans {
@@ -621,20 +703,4 @@ body .container {
 body section,
 body footer {
   width: 100%;
-}
-body .card {
-  background: #fff;
-  width: 800px;
-  height: 160px;
-  border-radius: 200px;
-  position: relative;
-  top: -80px;
-  z-index: 3;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 4px solid #fdeeff;
-  box-shadow: 0px 4px 8px #fbdcff;
-  display: none;
 }/*# sourceMappingURL=style.css.map */

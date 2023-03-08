@@ -1,5 +1,5 @@
 section.plans {
-    padding-top: 100px;
+    padding-top: 40px;
     background-image: url(../img/istockphoto-469783940-612x612\ 1.png);
     background-size: cover;
     position: relative;
@@ -14,7 +14,15 @@ section.plans {
         z-index: 1;
         background: colors(third);
         inset: 0;
-        opacity: 0.2;
+        opacity: 0.8;
+    }
+    .titel_label {
+        color: #fff;
+        font-size: 64px;
+        font-family: "Cairo", sans-serif;
+        font-weight: bolder;
+        position: relative;
+        z-index: 3;
     }
     .flex-container {
         display: flex;

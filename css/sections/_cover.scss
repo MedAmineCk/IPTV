@@ -5,8 +5,8 @@ section.cover {
     max-height: 650px;
     padding: 140px 140px 0 $padding_left;
     color: white;
-    background-image: url(../img/cover.png);
-    background-size: cover;
+    // background-image: url(../img/cover.png);
+    // background-size: cover;
     position: relative;
     &::before {
         content: "";
@@ -19,6 +19,36 @@ section.cover {
         inset: 0;
         opacity: 0.2;
     }
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 140px;
+        position: absolute;
+        z-index: 9;
+        background: url(../img/Vector\ 1.svg);
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+    }
+
+    .bg-slideShow_animation {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            position: absolute;
+        }
+    }
 
     .container {
         position: relative;
@@ -28,21 +58,24 @@ section.cover {
             font-family: $Ubuntu;
             font-style: normal;
             font-weight: bold;
-            font-size: 64px;
-            color: whites(0.8);
+            font-size: 45px;
+            max-width: 800px;
 
             span {
-                background: $gradient;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                &.span1 {
+                    background-image: url(../img/span1.svg);
+                }
+                &.span2 {
+                    background-image: url(../img/span2.svg);
+                    color: #000;
+                }
             }
         }
 
         p {
             font-style: normal;
             font-weight: 300;
-            font-size: 32px;
-            color: whites(0.6);
+            font-size: 24px;
         }
 
         .buttons-container {
@@ -51,15 +84,54 @@ section.cover {
             margin-top: 40px;
 
             button {
+                position: relative;
+                right: 100px;
                 padding: 10px 20px;
+                font-size: 34px;
                 &.main-btn {
+                    background: gold;
+                    color: #000;
+                }
+                &.more {
                     background: colors(sec);
                     color: #fff;
                 }
-                &.more {
-                    background: #fff;
+            }
+        }
+
+        .icon-container {
+            margin: 0 auto;
+            margin-top: 40px;
+            .object {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                animation: scrollDownArrow 2s infinite;
+                span {
+                    &:first-child {
+                        font-size: 45px;
+                    }
+                    &:nth-child(2) {
+                        position: relative;
+                        top: -4px;
+                    }
                 }
             }
         }
+    }
+}
+
+@keyframes scrollDownArrow {
+    0% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
     }
 }

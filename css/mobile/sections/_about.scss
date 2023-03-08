@@ -1,10 +1,15 @@
 section.about {
     display: block;
+    padding-bottom: 40px;
     h1 {
         font-size: 34px;
         color: colors(sec);
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .flex-container {
+        padding-bottom: 20px;
         .img {
             display: none;
             img {
@@ -23,7 +28,36 @@ section.about {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                span {
+                    font-size: 35px;
+                    color: gold;
+                }
             }
+        }
+    }
+    button {
+        position: relative;
+        padding: 10px 20px;
+        font-size: 24px;
+        margin: 0 auto;
+        right: 50%;
+        transform: translateX(50%);
+        &.main-btn {
+            background: gold;
+            color: #000;
+        }
+        &.more {
+            background: colors(sec);
+            color: #fff;
+        }
+    }
+    .card {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img {
+            max-width: 80px;
         }
     }
 }

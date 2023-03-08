@@ -1,7 +1,11 @@
 section.about {
+    padding-bottom: 100px;
     h1 {
-        font-size: 65px;
+        font-size: 45px;
         color: colors(sec);
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .flex-container {
         display: flex;
@@ -9,7 +13,29 @@ section.about {
         .img {
             max-width: 600px;
             border-radius: 40px;
-            overflow: hidden;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                top: -145px;
+                left: 0;
+                background-image: url(../img/gift\ 1.png);
+                background-size: contain;
+                z-index: 9;
+            }
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #ffffff 100%)
+                    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+            }
             img {
                 max-width: 100%;
             }
@@ -19,6 +45,53 @@ section.about {
             display: flex;
             align-items: center;
             font-size: 35px;
+            margin-bottom: 20px;
+            .icon {
+                $size: 45px;
+                width: $size;
+                height: $size;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    font-size: 35px;
+                    color: gold;
+                }
+            }
+        }
+    }
+
+    button {
+        position: relative;
+        right: 100px;
+        padding: 10px 20px;
+        font-size: 34px;
+        &.main-btn {
+            background: gold;
+            color: #000;
+        }
+        &.more {
+            background: colors(sec);
+            color: #fff;
+        }
+    }
+
+    .card {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img {
+            max-width: 100px;
         }
     }
 }
+
+// @keyframes diamond_first {
+//     0% {
+//         color: colors(third);
+//     }
+//     100% {
+//         color: colors(sec);
+//     }
+// }

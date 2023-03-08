@@ -21,6 +21,18 @@ section.cover {
         inset: 0;
         opacity: 0.2;
     }
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 56px;
+        position: absolute;
+        z-index: 9;
+        background: url(../../img/Vector\ 1.svg);
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+    }
 
     .container {
         position: relative;
@@ -34,9 +46,13 @@ section.cover {
             color: #fff;
 
             span {
-                background: $gradient;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                &.span1 {
+                    background-image: url(../../img/span1.svg);
+                }
+                &.span2 {
+                    background-image: url(../../img/span2.svg);
+                    color: #000;
+                }
             }
         }
 
@@ -63,5 +79,40 @@ section.cover {
                 }
             }
         }
+
+        .icon-container {
+            margin: 0 auto;
+            margin-top: 40px;
+            .object {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                animation: scrollDownArrow 2s infinite;
+                span {
+                    &:first-child {
+                        font-size: 45px;
+                    }
+                    &:nth-child(2) {
+                        position: relative;
+                        top: -4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes scrollDownArrow {
+    0% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
     }
 }

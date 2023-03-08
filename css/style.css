@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;700");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
 }
 
 .absolute_center {
@@ -112,10 +112,11 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 header .logo {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +132,6 @@ header nav a {
   margin: 0 20px;
   position: relative;
   color: rgba(255, 255, 255, 0.8);
-  opacity: 0.6;
 }
 header nav a:hover {
   cursor: pointer;
@@ -149,8 +149,6 @@ section.cover {
   max-height: 650px;
   padding: 140px 140px 0 140px;
   color: white;
-  background-image: url(../img/cover.png);
-  background-size: cover;
   position: relative;
 }
 section.cover::before {
@@ -164,6 +162,35 @@ section.cover::before {
   inset: 0;
   opacity: 0.2;
 }
+section.cover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  z-index: 9;
+  background: url(../img/Vector\ 1.svg);
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+}
+section.cover .bg-slideShow_animation {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+section.cover .bg-slideShow_animation .front,
+section.cover .bg-slideShow_animation .back {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+}
 section.cover .container {
   position: relative;
   z-index: 2;
@@ -172,19 +199,20 @@ section.cover .container h1 {
   font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 64px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 45px;
+  max-width: 800px;
 }
-section.cover .container h1 span {
-  background: radial-gradient(49.49% 260.63% at 48.33% 50.51%, #ff8a00 0%, #e52e71 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+section.cover .container h1 span.span1 {
+  background-image: url(../img/span1.svg);
+}
+section.cover .container h1 span.span2 {
+  background-image: url(../img/span2.svg);
+  color: #000;
 }
 section.cover .container p {
   font-style: normal;
   font-weight: 300;
-  font-size: 32px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
 }
 section.cover .container .buttons-container {
   display: flex;
@@ -192,19 +220,60 @@ section.cover .container .buttons-container {
   margin-top: 40px;
 }
 section.cover .container .buttons-container button {
+  position: relative;
+  right: 100px;
   padding: 10px 20px;
+  font-size: 34px;
 }
 section.cover .container .buttons-container button.main-btn {
+  background: gold;
+  color: #000;
+}
+section.cover .container .buttons-container button.more {
   background: #ff0000;
   color: #fff;
 }
-section.cover .container .buttons-container button.more {
-  background: #fff;
+section.cover .container .icon-container {
+  margin: 0 auto;
+  margin-top: 40px;
+}
+section.cover .container .icon-container .object {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scrollDownArrow 2s infinite;
+}
+section.cover .container .icon-container .object span:first-child {
+  font-size: 45px;
+}
+section.cover .container .icon-container .object span:nth-child(2) {
+  position: relative;
+  top: -4px;
 }
 
+@keyframes scrollDownArrow {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+section.about {
+  padding-bottom: 100px;
+}
 section.about h1 {
-  font-size: 65px;
+  font-size: 45px;
   color: #ff0000;
+  background: radial-gradient(49.49% 260.63% at 48.33% 50.51%, #ff8a00 0%, #e52e71 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 section.about .flex-container {
   display: flex;
@@ -213,7 +282,28 @@ section.about .flex-container {
 section.about .flex-container .img {
   max-width: 600px;
   border-radius: 40px;
-  overflow: hidden;
+  position: relative;
+}
+section.about .flex-container .img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -145px;
+  left: 0;
+  background-image: url(../img/gift\ 1.png);
+  background-size: contain;
+  z-index: 9;
+}
+section.about .flex-container .img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
 }
 section.about .flex-container .img img {
   max-width: 100%;
@@ -222,10 +312,45 @@ section.about .flex-container .item {
   display: flex;
   align-items: center;
   font-size: 35px;
+  margin-bottom: 20px;
+}
+section.about .flex-container .item .icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.about .flex-container .item .icon span {
+  font-size: 35px;
+  color: gold;
+}
+section.about button {
+  position: relative;
+  right: 100px;
+  padding: 10px 20px;
+  font-size: 34px;
+}
+section.about button.main-btn {
+  background: gold;
+  color: #000;
+}
+section.about button.more {
+  background: #ff0000;
+  color: #fff;
+}
+section.about .card {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section.about .card img {
+  max-width: 100px;
 }
 
 section.plans {
-  padding-top: 100px;
+  padding-top: 40px;
   background-image: url(../img/istockphoto-469783940-612x612\ 1.png);
   background-size: cover;
   position: relative;
@@ -241,7 +366,15 @@ section.plans::before {
   z-index: 1;
   background: #8103ff;
   inset: 0;
-  opacity: 0.2;
+  opacity: 0.8;
+}
+section.plans .titel_label {
+  color: #fff;
+  font-size: 64px;
+  font-family: "Cairo", sans-serif;
+  font-weight: bolder;
+  position: relative;
+  z-index: 3;
 }
 section.plans .flex-container {
   display: flex;
@@ -500,19 +633,4 @@ body .container {
 }
 body section {
   width: 100%;
-}
-body .card {
-  background: #fff;
-  width: 800px;
-  height: 160px;
-  border-radius: 200px;
-  position: relative;
-  top: -80px;
-  z-index: 3;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 4px solid #fdeeff;
-  box-shadow: 0px 4px 8px #fbdcff;
 }/*# sourceMappingURL=style.css.map */
