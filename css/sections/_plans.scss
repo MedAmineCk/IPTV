@@ -1,7 +1,8 @@
 section.plans {
     padding-top: 40px;
-    background-image: url(../img/istockphoto-469783940-612x612\ 1.png);
+    background-image: url(../img/cover.png);
     background-size: cover;
+    background-position: center;
     position: relative;
     max-height: 500px;
     margin-bottom: 300px;
@@ -12,7 +13,7 @@ section.plans {
         height: 100%;
         position: absolute;
         z-index: 1;
-        background: colors(third);
+        background: #530000;
         inset: 0;
         opacity: 0.8;
     }
@@ -40,6 +41,7 @@ section.plans {
         z-index: 3;
         background: #fff;
         border: 2px solid colors(third);
+        box-shadow: 0px 5px 10px 0px #9c27b054;
         h1 {
             text-align: center;
         }

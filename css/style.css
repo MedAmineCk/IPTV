@@ -52,7 +52,7 @@ body::-webkit-scrollbar-thumb,
 
 header {
   width: 100%;
-  background: rgba(74, 4, 87, 0.6117647059);
+  background: rgba(103, 58, 183, 0.4588235294);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   margin: 0 auto;
@@ -351,8 +351,9 @@ section.about .card img {
 
 section.plans {
   padding-top: 40px;
-  background-image: url(../img/istockphoto-469783940-612x612\ 1.png);
+  background-image: url(../img/cover.png);
   background-size: cover;
+  background-position: center;
   position: relative;
   max-height: 500px;
   margin-bottom: 300px;
@@ -364,7 +365,7 @@ section.plans::before {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: #8103ff;
+  background: #530000;
   inset: 0;
   opacity: 0.8;
 }
@@ -392,6 +393,7 @@ section.plans .plan-item {
   z-index: 3;
   background: #fff;
   border: 2px solid #8103ff;
+  box-shadow: 0px 5px 10px 0px rgba(156, 39, 176, 0.3294117647);
 }
 section.plans .plan-item h1 {
   text-align: center;
@@ -479,6 +481,7 @@ section.testimonial {
   background-image: url(../../img/istockphoto-469783940-612x612\ 1.png);
   background-size: cover;
   position: relative;
+  padding-bottom: 20px;
 }
 section.testimonial::before {
   content: "";
@@ -487,7 +490,7 @@ section.testimonial::before {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: #8103ff;
+  background: rgba(49, 1, 98, 0.8470588235);
   inset: 0;
   opacity: 0.8;
 }
@@ -505,22 +508,29 @@ section.testimonial .hr_lable {
   margin-right: 80px;
   margin-top: 20px;
   font-size: 24px;
+  color: rgba(255, 255, 255, 0.8039215686);
 }
 section.testimonial .comment_preview {
   width: 600px;
   margin: 0 auto;
   margin-top: 20px;
   border-radius: 12px;
-  padding: 40px;
+  padding: 20px 40px 40px 40px;
   background: #fff;
+  position: relative;
 }
 section.testimonial .comment_preview .rating {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
+  margin-bottom: 20px;
 }
 section.testimonial .comment_preview .rating .stars {
-  color: #ff0000;
+  color: gold;
   margin-right: 10px;
+}
+section.testimonial .comment_preview .rating .stars .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 section.testimonial .comment_preview .rating .r_val {
   margin-right: 20px;
@@ -536,21 +546,36 @@ section.testimonial .comment_preview p.preview {
   font-family: "El Messiri", sans-serif;
 }
 section.testimonial .comment_preview .icon {
-  font-size: 100px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.testimonial .comment_preview .icon img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0.2;
 }
 section.testimonial .clients {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 40px;
   cursor: pointer;
+  margin: 40px auto;
+  max-width: 800px;
 }
 section.testimonial .clients .item {
-  width: 330px;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 80px;
   display: flex;
 }
 section.testimonial .clients .item.active {
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 4px solid #fff;
 }
 section.testimonial .clients .item .avatar {
   width: 60px;
@@ -558,14 +583,16 @@ section.testimonial .clients .item .avatar {
   border-radius: 60px;
   background-size: cover;
   margin-right: 10px;
+  margin-left: 20px;
 }
 section.testimonial .clients .item .user_info .user_name {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  margin-bottom: 10px;
 }
 section.testimonial .clients .item .user_info .desc {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 footer .container {
@@ -574,6 +601,18 @@ footer .container {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+}
+footer .container .logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+footer .container .logo img {
+  max-width: 100%;
+  max-height: 100%;
 }
 footer .container ul {
   display: flex;

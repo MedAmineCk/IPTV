@@ -417,8 +417,9 @@ section.about .card img {
 
 section.plans {
   padding-top: 40px;
-  background-image: url(../../img/istockphoto-469783940-612x612\ 1.png);
+  background-image: url(../../img/cover.png);
   background-size: cover;
+  background-position: center;
   position: relative;
   max-height: 500px;
   margin-bottom: 580px;
@@ -431,7 +432,7 @@ section.plans::before {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: #8103ff;
+  background: #530000;
   inset: 0;
   opacity: 0.2;
 }
@@ -459,6 +460,7 @@ section.plans .plan-item {
   border: 2px solid #8103ff;
   margin-bottom: 20px;
   overflow: hidden;
+  box-shadow: 0px 5px 10px 0px rgba(156, 39, 176, 0.3294117647);
 }
 section.plans .plan-item h1 {
   text-align: center;
@@ -566,7 +568,7 @@ section.testimonial::before {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: #8103ff;
+  background: rgba(49, 1, 98, 0.8470588235);
   inset: 0;
   opacity: 0.8;
 }
@@ -592,14 +594,19 @@ section.testimonial .comment_preview {
   border-radius: 12px;
   padding: 20px;
   background: #fff;
+  position: relative;
 }
 section.testimonial .comment_preview .rating {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
 }
 section.testimonial .comment_preview .rating .stars {
   color: #ff0000;
   margin-right: 10px;
+}
+section.testimonial .comment_preview .rating .stars .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 section.testimonial .comment_preview .rating .r_val {
   margin-right: 20px;
@@ -615,7 +622,19 @@ section.testimonial .comment_preview p.preview {
   font-family: "El Messiri", sans-serif;
 }
 section.testimonial .comment_preview .icon {
-  font-size: 100px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.testimonial .comment_preview .icon img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0.2;
 }
 section.testimonial .clients {
   display: flex;
@@ -624,7 +643,8 @@ section.testimonial .clients {
   cursor: pointer;
 }
 section.testimonial .clients .item {
-  width: 330px;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 80px;
   display: flex;
 }
@@ -637,6 +657,7 @@ section.testimonial .clients .item .avatar {
   border-radius: 60px;
   background-size: cover;
   margin-right: 10px;
+  margin-left: 10px;
 }
 section.testimonial .clients .item .user_info .user_name {
   font-size: 18px;
@@ -652,9 +673,22 @@ footer .container {
   flex-direction: column;
   align-items: center;
 }
+footer .logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+footer .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
 footer ul {
   display: flex;
   list-style: none;
+  margin-bottom: 20px;
 }
 footer ul li {
   margin: 0 10px;

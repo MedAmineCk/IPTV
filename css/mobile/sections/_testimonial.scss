@@ -11,7 +11,7 @@ section.testimonial {
         height: 100%;
         position: absolute;
         z-index: 1;
-        background: colors(third);
+        background: #310162d8;
         inset: 0;
         opacity: 0.8;
     }
@@ -40,13 +40,18 @@ section.testimonial {
         border-radius: 12px;
         padding: 20px;
         background: #fff;
+        position: relative;
 
         .rating {
             display: flex;
             align-items: center;
+            flex-direction: row-reverse;
             .stars {
                 color: colors(sec);
                 margin-right: 10px;
+                .material-symbols-outlined {
+                    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+                }
             }
 
             .r_val {
@@ -66,7 +71,20 @@ section.testimonial {
         }
 
         .icon {
-            font-size: 100px;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            $size: 100px;
+            width: $size;
+            height: $size;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                opacity: 0.2;
+            }
         }
     }
 
@@ -77,7 +95,7 @@ section.testimonial {
         cursor: pointer;
 
         .item {
-            width: 330px;
+            width: fit-content;
             height: 80px;
             $size: 60px;
             display: flex;
@@ -92,6 +110,7 @@ section.testimonial {
                 border-radius: $size;
                 background-size: cover;
                 margin-right: 10px;
+                margin-left: 10px;
             }
 
             .user_info {

@@ -3,6 +3,7 @@ section.testimonial {
     background-image: url(../../img/istockphoto-469783940-612x612\ 1.png);
     background-size: cover;
     position: relative;
+    padding-bottom: 20px;
     &::before {
         content: "";
         display: block;
@@ -10,7 +11,7 @@ section.testimonial {
         height: 100%;
         position: absolute;
         z-index: 1;
-        background: colors(third);
+        background: #310162d8;
         inset: 0;
         opacity: 0.8;
     }
@@ -30,6 +31,7 @@ section.testimonial {
         margin-right: 80px;
         margin-top: 20px;
         font-size: 24px;
+        color: #ffffffcd;
     }
 
     .comment_preview {
@@ -37,15 +39,21 @@ section.testimonial {
         margin: 0 auto;
         margin-top: 20px;
         border-radius: 12px;
-        padding: 40px;
+        padding: 20px 40px 40px 40px;
         background: #fff;
+        position: relative;
 
         .rating {
             display: flex;
             align-items: center;
+            flex-direction: row-reverse;
+            margin-bottom: 20px;
             .stars {
-                color: colors(sec);
+                color: gold;
                 margin-right: 10px;
+                .material-symbols-outlined {
+                    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+                }
             }
 
             .r_val {
@@ -65,24 +73,39 @@ section.testimonial {
         }
 
         .icon {
-            font-size: 100px;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            $size: 100px;
+            width: $size;
+            height: $size;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                opacity: 0.2;
+            }
         }
     }
 
     .clients {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         margin-top: 40px;
         cursor: pointer;
+        margin: 40px auto;
+        max-width: 800px;
 
         .item {
-            width: 330px;
+            width: fit-content;
             height: 80px;
             $size: 60px;
             display: flex;
 
             &.active {
-                border-bottom: 1px solid colors(sec);
+                border-bottom: 4px solid #fff;
             }
 
             .avatar {
@@ -91,17 +114,19 @@ section.testimonial {
                 border-radius: $size;
                 background-size: cover;
                 margin-right: 10px;
+                margin-left: 20px;
             }
 
             .user_info {
                 .user_name {
                     font-size: 18px;
-                    color: whites(0.6);
+                    color: #fff;
+                    margin-bottom: 10px;
                 }
 
                 .desc {
                     font-size: 14px;
-                    color: whites(0.4);
+                    color: whites(0.8);
                 }
             }
         }
