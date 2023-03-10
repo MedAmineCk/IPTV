@@ -62,7 +62,6 @@ header {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  font-family: "Varela Round", sans-serif;
   transition: all linear 0.4s;
 }
 header.fixed {
@@ -196,7 +195,6 @@ section.cover .container {
   z-index: 2;
 }
 section.cover .container h1 {
-  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 45px;
@@ -325,6 +323,32 @@ section.about .flex-container .item .icon span {
   font-size: 35px;
   color: gold;
 }
+section.about .flex-container .item:nth-child(odd) span {
+  color: #fff;
+  filter: drop-shadow(0 0 10px #8103ff);
+  animation: diamond_1 1s linear infinite;
+}
+section.about .flex-container .item:nth-child(even) span {
+  color: #fff;
+  filter: drop-shadow(0 0 10px #ff0303);
+  animation: diamond_2 1s linear infinite;
+}
+@keyframes diamond_1 {
+  0% {
+    filter: drop-shadow(0 0 10px #ff0303);
+  }
+  100% {
+    filter: drop-shadow(0 0 10px #8103ff);
+  }
+}
+@keyframes diamond_2 {
+  0% {
+    filter: drop-shadow(0 0 10px #8103ff);
+  }
+  100% {
+    filter: drop-shadow(0 0 10px #ff0303);
+  }
+}
 section.about button {
   position: relative;
   right: 100px;
@@ -332,11 +356,7 @@ section.about button {
   font-size: 34px;
 }
 section.about button.main-btn {
-  background: gold;
-  color: #000;
-}
-section.about button.more {
-  background: #ff0000;
+  background: radial-gradient(49.49% 260.63% at 48.33% 50.51%, #ff8a00 0%, #e52e71 100%);
   color: #fff;
 }
 section.about .card {
@@ -409,11 +429,13 @@ section.plans .plan-item .price {
   left: -60px;
 }
 section.plans .plan-item .price .money {
-  font-size: 45px;
+  font-size: 55px;
+  font-weight: bold;
 }
 section.plans .plan-item .price .duration {
   position: relative;
   left: -100px;
+  top: -10px;
 }
 section.plans .plan-item .content .item {
   display: flex;
@@ -428,7 +450,7 @@ section.plans .plan-item .content .item .icon {
   color: #8103ff;
 }
 section.plans .plan-item .content .item p {
-  font-size: 24px;
+  font-size: 22px;
 }
 section.plans .plan-item button {
   padding: 10px 20px;
@@ -455,6 +477,9 @@ section.plans .plan-item .image-container {
 }
 section.plans .plan-item .image-container img {
   width: 100%;
+}
+section.plans .plan-item .image-container img.mobile_version {
+  display: none;
 }
 
 section.advantages {
@@ -543,7 +568,6 @@ section.testimonial .comment_preview p.preview {
   align-items: center;
   font-size: 24px;
   font-weight: bold;
-  font-family: "El Messiri", sans-serif;
 }
 section.testimonial .comment_preview .icon {
   position: absolute;
@@ -657,7 +681,6 @@ body {
   position: relative;
   background: #fff;
   direction: rtl;
-  font-family: "Ubuntu", sans-serif;
 }
 body h1 {
   font-family: "Cairo", sans-serif;

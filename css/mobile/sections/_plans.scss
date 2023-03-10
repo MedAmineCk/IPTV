@@ -58,11 +58,13 @@ section.plans {
             left: -20%;
             margin-bottom: 20px;
             .money {
-                font-size: 34px;
+                font-size: 45px;
+                font-weight: bold;
             }
             .duration {
                 position: relative;
                 left: -100px;
+                top: -10px;
             }
         }
         .content {
@@ -70,14 +72,21 @@ section.plans {
             .item {
                 display: flex;
                 align-items: center;
+                margin-bottom: 15px;
                 .icon {
-                    $size: 50px;
+                    $size: 25px;
                     width: $size;
                     height: $size;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: colors(third);
+                    border-radius: $size;
+                    color: #fff;
+                    background: colors(third);
+                    margin: 0 20px;
+                    span {
+                        font-size: 18px;
+                    }
                 }
                 p {
                     font-size: 18px;
@@ -103,13 +112,15 @@ section.plans {
             }
         }
         .image-container {
-            display: none;
             position: absolute;
-            bottom: -50px;
+            top: 0;
             left: 0;
-            width: 100%;
+            width: 150px;
             height: 150px;
             img {
+                &.desktop_version {
+                    display: none;
+                }
                 width: 100%;
             }
         }

@@ -61,7 +61,6 @@ header {
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
-  font-family: "Varela Round", sans-serif;
   transition: all linear 0.4s;
   background-color: rgba(38, 39, 45, 0.6901960784);
   -webkit-backdrop-filter: blur(30px);
@@ -376,7 +375,7 @@ section.about .flex-container .img img {
 section.about .flex-container .item {
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 24px;
 }
 section.about .flex-container .item .icon {
   width: 45px;
@@ -386,8 +385,34 @@ section.about .flex-container .item .icon {
   align-items: center;
 }
 section.about .flex-container .item .icon span {
-  font-size: 35px;
+  font-size: 28px;
   color: gold;
+}
+section.about .flex-container .item:nth-child(odd) span {
+  color: #fff;
+  filter: drop-shadow(0 0 10px #8103ff);
+  animation: diamond_1 1s linear infinite;
+}
+section.about .flex-container .item:nth-child(even) span {
+  color: #fff;
+  filter: drop-shadow(0 0 10px #ff0303);
+  animation: diamond_2 1s linear infinite;
+}
+@keyframes diamond_1 {
+  0% {
+    filter: drop-shadow(0 0 10px #ff0303);
+  }
+  100% {
+    filter: drop-shadow(0 0 10px #8103ff);
+  }
+}
+@keyframes diamond_2 {
+  0% {
+    filter: drop-shadow(0 0 10px #8103ff);
+  }
+  100% {
+    filter: drop-shadow(0 0 10px #ff0303);
+  }
 }
 section.about button {
   position: relative;
@@ -398,11 +423,7 @@ section.about button {
   transform: translateX(50%);
 }
 section.about button.main-btn {
-  background: gold;
-  color: #000;
-}
-section.about button.more {
-  background: #ff0000;
+  background: radial-gradient(49.49% 260.63% at 48.33% 50.51%, #ff8a00 0%, #e52e71 100%);
   color: #fff;
 }
 section.about .card {
@@ -478,11 +499,13 @@ section.plans .plan-item .price {
   margin-bottom: 20px;
 }
 section.plans .plan-item .price .money {
-  font-size: 34px;
+  font-size: 45px;
+  font-weight: bold;
 }
 section.plans .plan-item .price .duration {
   position: relative;
   left: -100px;
+  top: -10px;
 }
 section.plans .plan-item .content {
   margin-bottom: 20px;
@@ -490,14 +513,21 @@ section.plans .plan-item .content {
 section.plans .plan-item .content .item {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 section.plans .plan-item .content .item .icon {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #8103ff;
+  border-radius: 25px;
+  color: #fff;
+  background: #8103ff;
+  margin: 0 20px;
+}
+section.plans .plan-item .content .item .icon span {
+  font-size: 18px;
 }
 section.plans .plan-item .content .item p {
   font-size: 18px;
@@ -520,15 +550,17 @@ section.plans .plan-item button:hover {
   box-shadow: 0px 0px 10px #8103ff;
 }
 section.plans .plan-item .image-container {
-  display: none;
   position: absolute;
-  bottom: -50px;
+  top: 0;
   left: 0;
-  width: 100%;
+  width: 150px;
   height: 150px;
 }
 section.plans .plan-item .image-container img {
   width: 100%;
+}
+section.plans .plan-item .image-container img.desktop_version {
+  display: none;
 }
 
 section.advantages {
@@ -619,7 +651,6 @@ section.testimonial .comment_preview p.preview {
   align-items: center;
   font-size: 18px;
   font-weight: bold;
-  font-family: "El Messiri", sans-serif;
 }
 section.testimonial .comment_preview .icon {
   position: absolute;
@@ -736,7 +767,6 @@ body {
   position: relative;
   background: #fff;
   direction: rtl;
-  font-family: "Ubuntu", sans-serif;
 }
 body h1 {
   font-family: "Cairo", sans-serif;

@@ -20,7 +20,7 @@ section.about {
         .item {
             display: flex;
             align-items: center;
-            font-size: 18px;
+            font-size: 24px;
             .icon {
                 $size: 45px;
                 width: $size;
@@ -29,8 +29,35 @@ section.about {
                 justify-content: center;
                 align-items: center;
                 span {
-                    font-size: 35px;
+                    font-size: 28px;
                     color: gold;
+                }
+            }
+            &:nth-child(odd) span {
+                color: #fff;
+                filter: drop-shadow(0 0 10px #8103ff);
+                animation: diamond_1 1s linear infinite;
+            }
+            &:nth-child(even) span {
+                color: #fff;
+                filter: drop-shadow(0 0 10px #ff0303);
+                animation: diamond_2 1s linear infinite;
+            }
+
+            @keyframes diamond_1 {
+                0% {
+                    filter: drop-shadow(0 0 10px #ff0303);
+                }
+                100% {
+                    filter: drop-shadow(0 0 10px #8103ff);
+                }
+            }
+            @keyframes diamond_2 {
+                0% {
+                    filter: drop-shadow(0 0 10px #8103ff);
+                }
+                100% {
+                    filter: drop-shadow(0 0 10px #ff0303);
                 }
             }
         }
@@ -43,11 +70,7 @@ section.about {
         right: 50%;
         transform: translateX(50%);
         &.main-btn {
-            background: gold;
-            color: #000;
-        }
-        &.more {
-            background: colors(sec);
+            background: $gradient;
             color: #fff;
         }
     }

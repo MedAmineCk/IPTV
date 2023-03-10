@@ -55,11 +55,13 @@ section.plans {
             position: relative;
             left: -60px;
             .money {
-                font-size: 45px;
+                font-size: 55px;
+                font-weight: bold;
             }
             .duration {
                 position: relative;
                 left: -100px;
+                top: -10px;
             }
         }
         .content {
@@ -76,7 +78,7 @@ section.plans {
                     color: colors(third);
                 }
                 p {
-                    font-size: 24px;
+                    font-size: 22px;
                 }
             }
         }
@@ -104,6 +106,9 @@ section.plans {
             width: 100%;
             height: 150px;
             img {
+                &.mobile_version {
+                    display: none;
+                }
                 width: 100%;
             }
         }

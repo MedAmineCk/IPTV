@@ -58,6 +58,33 @@ section.about {
                     color: gold;
                 }
             }
+            &:nth-child(odd) span {
+                color: #fff;
+                filter: drop-shadow(0 0 10px #8103ff);
+                animation: diamond_1 1s linear infinite;
+            }
+            &:nth-child(even) span {
+                color: #fff;
+                filter: drop-shadow(0 0 10px #ff0303);
+                animation: diamond_2 1s linear infinite;
+            }
+
+            @keyframes diamond_1 {
+                0% {
+                    filter: drop-shadow(0 0 10px #ff0303);
+                }
+                100% {
+                    filter: drop-shadow(0 0 10px #8103ff);
+                }
+            }
+            @keyframes diamond_2 {
+                0% {
+                    filter: drop-shadow(0 0 10px #8103ff);
+                }
+                100% {
+                    filter: drop-shadow(0 0 10px #ff0303);
+                }
+            }
         }
     }
 
@@ -67,11 +94,7 @@ section.about {
         padding: 10px 20px;
         font-size: 34px;
         &.main-btn {
-            background: gold;
-            color: #000;
-        }
-        &.more {
-            background: colors(sec);
+            background: $gradient;
             color: #fff;
         }
     }
