@@ -7,6 +7,7 @@
 @import "./sections/advantages";
 @import "./sections/testimonial";
 @import "./sections/footer";
+@import "../modules";
 
 @include mobile() {
 }

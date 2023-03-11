@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almarai&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -762,6 +763,278 @@ footer .social_media .item.instagram {
   background: #e4405f;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-----whatsapp pluging------*/
+#whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+#whatsapp.active .btn-container .label {
+  animation-name: fadeOutDown;
+}
+#whatsapp.active .btn-container .icon-container::before {
+  animation-name: wtp_animation-before;
+  animation-duration: 0.4s;
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+#whatsapp.active .btn-container .icon-container::after {
+  animation-name: wtp_animation-after;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+#whatsapp.active .wtp-container {
+  display: block;
+  animation-name: fadeInUp;
+}
+#whatsapp.active .wtp-container .wtp-body .item {
+  animation-name: fadeInLeft;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(1n) {
+  animation-delay: 0.08s;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(2n) {
+  animation-delay: 0.16s;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(3n) {
+  animation-delay: 0.24s;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(4n) {
+  animation-delay: 0.32s;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(5n) {
+  animation-delay: 0.4s;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(6n) {
+  animation-delay: 0.48s;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(7n) {
+  animation-delay: 0.56s;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(8n) {
+  animation-delay: 0.64s;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(9n) {
+  animation-delay: 0.72s;
+}
+#whatsapp.active .wtp-container .wtp-body .item:nth-child(10n) {
+  animation-delay: 0.8s;
+}
+#whatsapp .btn-container {
+  display: flex;
+  align-items: center;
+}
+#whatsapp .btn-container .label {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4px 10px;
+  background: #f5f7f9;
+  margin-right: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px #ccc;
+  animation-name: fadeInUp;
+}
+#whatsapp .btn-container .icon-container {
+  background: #2db742;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  box-shadow: 0 4px 8px #ccc;
+  position: relative;
+  overflow: hidden;
+}
+#whatsapp .btn-container .icon-container::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+  background-image: url("https://ik.imagekit.io/medamineck/Images/svgexport-1_FXJ3AnYpl.png?updatedAt=1632243566062");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #2db742;
+}
+#whatsapp .btn-container .icon-container::after {
+  content: "";
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("https://ik.imagekit.io/medamineck/Images/wtp_icon_Gw5rdmIyW.png?updatedAt=1632243643975");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #2db742;
+  background-size: contain;
+}
+#whatsapp .wtp-container {
+  display: none;
+  width: 90vw;
+  max-width: 400px;
+  position: absolute;
+  left: 0;
+  background: #fff;
+  bottom: 80px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+#whatsapp .wtp-container .wtp-header {
+  background: #2db742;
+  display: flex;
+  height: 100px;
+}
+#whatsapp .wtp-container .wtp-header .instructions {
+  text-align: right;
+  padding: 10px;
+}
+#whatsapp .wtp-container .wtp-header .instructions p.h1 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#whatsapp .wtp-container .wtp-header .instructions p.sub {
+  color: #fff;
+  opacity: 0.8;
+  line-height: 22px;
+}
+#whatsapp .wtp-container .wtp-header .icon-container {
+  width: 100px;
+  height: 100%;
+  padding: 20px;
+}
+#whatsapp .wtp-container .wtp-header .icon-container span {
+  font-size: 45px;
+  color: #fff;
+}
+#whatsapp .wtp-container .wtp-body {
+  padding: 20px;
+}
+#whatsapp .wtp-container .wtp-body p.header {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+#whatsapp .wtp-container .wtp-body .item {
+  display: flex;
+  background: #f5f7f9;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border-left: 2px solid #2db742;
+  cursor: pointer;
+  transition: box-shadow linear 0.2s;
+  box-shadow: 0 0 0 #ccc;
+}
+#whatsapp .wtp-container .wtp-body .item:hover {
+  box-shadow: 2px 4px 10px #ccc;
+}
+#whatsapp .wtp-container .wtp-body .item .logo-container {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  margin-right: 10px;
+  border: 2px solid #2db742;
+  overflow: hidden;
+  margin-left: 20px;
+}
+#whatsapp .wtp-container .wtp-body .item .logo-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#whatsapp .wtp-container .wtp-body .item .content {
+  width: 100%;
+}
+#whatsapp .wtp-container .wtp-body .item .content p.name {
+  margin-top: 15px;
+  opacity: 0.8;
+}
+#whatsapp .wtp-container .wtp-body .item .content p.sub {
+  font-size: 12px;
+  opacity: 0.4;
+  margin-top: 4px;
+}
+#whatsapp .wtp-container .wtp-body .item .icon-container span {
+  color: #2db742;
+}
+
+@keyframes wtp_animation-before {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+    visibility: hidden;
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(180deg);
+    visibility: visible;
+  }
+}
+@keyframes wtp_animation-after {
+  0% {
+    transform: translate(-50%, -50%) rotate(0) scale(1);
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(180deg) scale(0.4);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(0.1);
+    opacity: 0;
+  }
+}
+.animate__animated {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
 body {
   width: 100%;
   height: 100%;

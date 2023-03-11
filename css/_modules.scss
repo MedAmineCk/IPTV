@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai&display=swap");
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-----whatsapp pluging------*/
+#whatsapp {
+    $wtp_color: #2db742;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    &.active {
+        .btn-container {
+            .label {
+                animation-name: fadeOutDown;
+            }
+            .icon-container {
+                &::before {
+                    animation-name: wtp_animation-before;
+                    animation-duration: 0.4s;
+                    animation-delay: 0.1s;
+                    animation-fill-mode: both;
+                }
+                &::after {
+                    animation-name: wtp_animation-after;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                }
+            }
+        }
+        .wtp-container {
+            display: block;
+            animation-name: fadeInUp;
+            .wtp-body {
+                .item {
+                    animation-name: fadeInLeft;
+                    //adding animations delay for each item
+                    @for $i from 1 through 10 {
+                        &:nth-child(#{$i}n) {
+                            animation-delay: #{$i * 0.08}s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-container {
+        display: flex;
+        align-items: center;
+
+        .label {
+            width: fit-content;
+            height: fit-content;
+            padding: 4px 10px;
+            background: #f5f7f9;
+            margin-right: 10px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px #ccc;
+            animation-name: fadeInUp;
+        }
+
+        .icon-container {
+            background: $wtp_color;
+            color: #fff;
+            $size: 60px;
+            width: $size;
+            height: $size;
+            border-radius: $size;
+            box-shadow: 0 4px 8px #ccc;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #000;
+                background-image: url("https://ik.imagekit.io/medamineck/Images/svgexport-1_FXJ3AnYpl.png?updatedAt=1632243566062");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: $wtp_color;
+            }
+            &::after {
+                content: "";
+                width: 60%;
+                height: 60%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-image: url("https://ik.imagekit.io/medamineck/Images/wtp_icon_Gw5rdmIyW.png?updatedAt=1632243643975");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: $wtp_color;
+                background-size: contain;
+            }
+        }
+    }
+    .wtp-container {
+        display: none;
+        width: 90vw;
+        max-width: 400px;
+        position: absolute;
+        left: 0;
+        background: #fff;
+        bottom: 80px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        overflow: hidden;
+        .wtp-header {
+            background: $wtp_color;
+            display: flex;
+            height: 100px;
+            .instructions {
+                text-align: right;
+                padding: 10px;
+                p {
+                    &.h1 {
+                        color: #fff;
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                    }
+                    &.sub {
+                        color: #fff;
+                        opacity: 0.8;
+                        line-height: 22px;
+                    }
+                }
+            }
+            .icon-container {
+                width: 100px;
+                height: 100%;
+                padding: 20px;
+                span {
+                    font-size: 45px;
+                    color: #fff;
+                }
+            }
+        }
+        .wtp-body {
+            padding: 20px;
+            p.header {
+                text-align: center;
+                margin: 0 auto;
+                font-size: 12px;
+                opacity: 0.6;
+                margin-bottom: 20px;
+            }
+            .item {
+                display: flex;
+                background: #f5f7f9;
+                padding: 10px;
+                margin-top: 10px;
+                border-radius: 4px;
+                border-left: 2px solid $wtp_color;
+                cursor: pointer;
+                transition: box-shadow linear 0.2s;
+                box-shadow: 0 0 0 #ccc;
+                &:hover {
+                    box-shadow: 2px 4px 10px #ccc;
+                }
+                .logo-container {
+                    $size: 60px;
+                    min-width: $size;
+                    height: $size;
+                    border-radius: $size;
+                    margin-right: 10px;
+                    border: 2px solid $wtp_color;
+                    overflow: hidden;
+                    margin-left: 20px;
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+                .content {
+                    width: 100%;
+                    p {
+                        &.name {
+                            margin-top: 15px;
+                            opacity: 0.8;
+                        }
+                        &.sub {
+                            font-size: 12px;
+                            opacity: 0.4;
+                            margin-top: 4px;
+                        }
+                    }
+                }
+                .icon-container {
+                    span {
+                        color: $wtp_color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes wtp_animation-before {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+        visibility: hidden;
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(180deg);
+        visibility: visible;
+    }
+}
+
+@keyframes wtp_animation-after {
+    0% {
+        transform: translate(-50%, -50%) rotate(0) scale(1);
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(180deg) scale(0.4);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(0.1);
+        opacity: 0;
+    }
+}
+
+.animate__animated {
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+}
