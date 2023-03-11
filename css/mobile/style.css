@@ -722,6 +722,7 @@ footer ul {
   display: flex;
   list-style: none;
   margin-bottom: 20px;
+  display: none;
 }
 footer ul li {
   margin: 0 10px;
@@ -733,12 +734,14 @@ footer span.copyright {
   text-align: center;
   margin: 0 auto;
   margin: 20px auto;
+  display: none;
 }
 footer .social_media {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  display: none;
 }
 footer .social_media .item {
   width: 45px;

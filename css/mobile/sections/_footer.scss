@@ -23,6 +23,7 @@ footer {
         display: flex;
         list-style: none;
         margin-bottom: 20px;
+        display: none;
         li {
             margin: 0 10px;
         }
@@ -35,12 +36,14 @@ footer {
         text-align: center;
         margin: 0 auto;
         margin: 20px auto;
+        display: none;
     }
     .social_media {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
+        display: none;
         .item {
             $_size: 45px;
             width: $_size;
