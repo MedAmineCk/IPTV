@@ -9,7 +9,7 @@ var conf = {
       whatsapp: "212775931245",
       label: "فريق الدعم",
       message: "مرحبا",
-      logo: "../img/support.png",
+      logo: "./img/support.png",
     },
   ],
   label: "دردش معنا",
