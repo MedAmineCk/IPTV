@@ -6,10 +6,10 @@ $("#whatsapp .main-btn").on("click", function () {
 var conf = {
   accounts: [
     {
-      whatsapp: "212775931245",
+      whatsapp: "447529430801",
       label: "فريق الدعم",
       message: "مرحبا",
-      logo: "./img/support.png",
+      logo: "./img/support.jpg",
     },
   ],
   label: "دردش معنا",
