@@ -67,8 +67,8 @@ section.about {
         padding: 10px 20px;
         font-size: 24px;
         margin: 0 auto;
-        right: 50%;
-        transform: translateX(50%);
+        left: 50%;
+        transform: translateX(-50%);
         &.main-btn {
             background: $gradient;
             color: #fff;

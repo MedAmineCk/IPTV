@@ -220,7 +220,6 @@ section.cover .container .buttons-container {
 }
 section.cover .container .buttons-container button {
   position: relative;
-  right: 100px;
   padding: 10px 20px;
   font-size: 34px;
 }
@@ -319,6 +318,7 @@ section.about .flex-container .item .icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 20px;
 }
 section.about .flex-container .item .icon span {
   font-size: 35px;
@@ -352,7 +352,7 @@ section.about .flex-container .item:nth-child(even) span {
 }
 section.about button {
   position: relative;
-  right: 100px;
+  left: 100px;
   padding: 10px 20px;
   font-size: 34px;
 }
@@ -424,10 +424,10 @@ section.plans .plan-item .price {
   color: #fff;
   height: 100px;
   width: 320px;
-  padding-right: 20px;
-  border-radius: 0 20px 20px 0;
+  padding-left: 20px;
+  border-radius: 20px 0 0 20px;
   position: relative;
-  left: -60px;
+  right: -60px;
 }
 section.plans .plan-item .price .money {
   font-size: 55px;
@@ -435,7 +435,7 @@ section.plans .plan-item .price .money {
 }
 section.plans .plan-item .price .duration {
   position: relative;
-  left: -100px;
+  right: -100px;
   top: -10px;
 }
 section.plans .plan-item .content .item {
@@ -457,8 +457,8 @@ section.plans .plan-item button {
   padding: 10px 20px;
   margin: 0 auto;
   position: relative;
-  right: 50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
   background: #fff;
   border: 2px solid #8103ff;
   color: #8103ff;
@@ -686,7 +686,7 @@ footer .container .social_media .item.instagram {
 #whatsapp {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   z-index: 9999;
 }
 #whatsapp.active .btn-container .label {
@@ -799,7 +799,7 @@ footer .container .social_media .item.instagram {
   width: 90vw;
   max-width: 400px;
   position: absolute;
-  left: 0;
+  right: 0;
   background: #fff;
   bottom: 80px;
   border: 1px solid #ccc;
@@ -953,7 +953,7 @@ body {
   height: 100%;
   position: relative;
   background: #fff;
-  direction: rtl;
+  direction: ltr;
 }
 body h1 {
   font-family: "Cairo", sans-serif;
@@ -963,7 +963,6 @@ body .container {
   margin: 0 auto;
   width: 100%;
   padding: 0 40px;
-  text-align: right;
   position: relative;
 }
 body section {

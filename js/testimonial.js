@@ -2,25 +2,25 @@
 const recommendations = [
   {
     id: 1,
-    referee: "سارة",
+    referee: "Sarah",
     profile: "./img/referees/profile_1.jpeg",
     recommendation: `
-    اشكر صاحب الموقع على الباقة المجانية، كما اشكر فريق الدعم على التواصل الدائم`,
-    role: "أستاذة",
+    I thank the website owner for the free package, and I appreciate the support team for their constant communication.`,
+    role: "Professor",
   },
   {
     id: 2,
-    referee: "نور",
+    referee: "Nour",
     profile: "./img/referees/profile_2.jpeg",
-    recommendation: `لم اكن اتوقع ان هناك موقع يوفر باقات مجانية، حتى تصادفت مع هاد الموقع، الموقع موثوق فعند انتهائك من المهمة البصيطة يرسلون لك الباقة فورا`,
-    role: "ممرضة",
+    recommendation: `I didn't expect there to be a website that provides free packages until I came across this website. The website is reliable, as they send you the package immediately after completing the simple task.`,
+    role: "Nurse",
   },
   {
     id: 3,
-    referee: "ابراهيم احمد",
+    referee: "Ibrahim Ahmed",
     profile: "./img/referees/profile_3.jpeg",
-    recommendation: `شكرا على الباقات المجانية، قنوات كثيرة و بجودة عالية و بدون تقطع، و الله روعة`,
-    role: "مقاول",
+    recommendation: `Thank you for the free packages. There are many channels with high quality and no interruptions. It's amazing, I swear.`,
+    role: "Contractor",
   },
 ];
 

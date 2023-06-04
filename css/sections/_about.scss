@@ -53,6 +53,7 @@ section.about {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-right: 20px;
                 span {
                     font-size: 35px;
                     color: gold;
@@ -90,7 +91,7 @@ section.about {
 
     button {
         position: relative;
-        right: 100px;
+        left: 100px;
         padding: 10px 20px;
         font-size: 34px;
         &.main-btn {

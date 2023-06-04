@@ -74,7 +74,7 @@ header .nav_tab_icon {
   position: absolute;
   z-index: 3;
   top: 20px;
-  left: 10px;
+  right: 10px;
 }
 header .nav_tab_icon .item {
   height: 5px;
@@ -420,8 +420,8 @@ section.about button {
   padding: 10px 20px;
   font-size: 24px;
   margin: 0 auto;
-  right: 50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 section.about button.main-btn {
   background: radial-gradient(49.49% 260.63% at 48.33% 50.51%, #ff8a00 0%, #e52e71 100%);
@@ -493,10 +493,10 @@ section.plans .plan-item .price {
   color: #fff;
   height: 80px;
   width: 80%;
-  padding-right: 20px;
-  border-radius: 0 20px 20px 0;
+  padding-left: 20px;
+  border-radius: 20px 0 0 20px;
   position: relative;
-  left: -20%;
+  right: -20%;
   margin-bottom: 20px;
 }
 section.plans .plan-item .price .money {
@@ -505,7 +505,7 @@ section.plans .plan-item .price .money {
 }
 section.plans .plan-item .price .duration {
   position: relative;
-  left: -100px;
+  right: -100px;
   top: -10px;
 }
 section.plans .plan-item .content {
@@ -538,8 +538,8 @@ section.plans .plan-item button {
   margin: 0 auto;
   margin-bottom: 20px;
   position: relative;
-  right: 50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
   background: #fff;
   border: 2px solid #8103ff;
   color: #8103ff;
@@ -776,7 +776,7 @@ footer .social_media .item.instagram {
 #whatsapp {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   z-index: 9999;
 }
 #whatsapp.active .btn-container .label {
@@ -889,7 +889,7 @@ footer .social_media .item.instagram {
   width: 90vw;
   max-width: 400px;
   position: absolute;
-  left: 0;
+  right: 0;
   background: #fff;
   bottom: 80px;
   border: 1px solid #ccc;
@@ -1043,7 +1043,7 @@ body {
   height: 100%;
   position: relative;
   background: #fff;
-  direction: rtl;
+  direction: ltr;
 }
 body h1 {
   font-family: "Cairo", sans-serif;
@@ -1053,7 +1053,7 @@ body .container {
   margin: 0 auto;
   width: 100%;
   padding: 0 20px;
-  text-align: right;
+  text-align: left;
   position: relative;
 }
 body section,

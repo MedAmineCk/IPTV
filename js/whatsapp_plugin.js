@@ -7,15 +7,15 @@ var conf = {
   accounts: [
     {
       whatsapp: "447529430801",
-      label: "فريق الدعم",
-      message: "مرحبا",
+      label: "Support Team",
+      message: "Hello",
       logo: "./img/support.jpg",
     },
   ],
-  label: "دردش معنا",
-  titel: "بدء محادثة",
-  subtitel: "أهلا! انقر فوق أحد أعضائنا أدناه للدردشة على WhatsApp",
-  notification: "عادة ما يرد الفريق في غضون بضع دقائق.",
+  label: "Chat with us",
+  titel: "Start Chat",
+  subtitel: "Hello! Click on one of our team members below to chat on WhatsApp",
+  notification: "The team usually responds within a few minutes.",
 };
 function openWtp(number, text) {
   window.open("https://wa.me/" + number + "?text=" + text);
