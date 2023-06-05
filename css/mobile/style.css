@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Almarai&display=swap");
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -439,7 +444,7 @@ section.about .card img {
 
 section.plans {
   padding-top: 40px;
-  background-image: url(../../img/cover.png);
+  background-image: url(../../img/cover.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -671,6 +676,7 @@ section.testimonial .comment_preview .icon img {
 }
 section.testimonial .clients {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 40px;
   cursor: pointer;

@@ -3,22 +3,22 @@ const recommendations = [
   {
     id: 1,
     referee: "Sarah",
-    profile: "./img/referees/profile_1.jpeg",
+    profile: "./img/referees/29.jpg",
     recommendation: `
     I thank the website owner for the free package, and I appreciate the support team for their constant communication.`,
     role: "Professor",
   },
   {
     id: 2,
-    referee: "Nour",
-    profile: "./img/referees/profile_2.jpeg",
+    referee: "Emily",
+    profile: "./img/referees/47.jpg",
     recommendation: `I didn't expect there to be a website that provides free packages until I came across this website. The website is reliable, as they send you the package immediately after completing the simple task.`,
     role: "Nurse",
   },
   {
     id: 3,
-    referee: "Ibrahim Ahmed",
-    profile: "./img/referees/profile_3.jpeg",
+    referee: "Michael",
+    profile: "./img/referees/63.jpg",
     recommendation: `Thank you for the free packages. There are many channels with high quality and no interruptions. It's amazing, I swear.`,
     role: "Contractor",
   },

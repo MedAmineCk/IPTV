@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Almarai&display=swap");
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -372,7 +377,7 @@ section.about .card img {
 
 section.plans {
   padding-top: 40px;
-  background-image: url(../img/cover.png);
+  background-image: url(../img/cover.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -388,7 +393,7 @@ section.plans::before {
   z-index: 1;
   background: #530000;
   inset: 0;
-  opacity: 0.8;
+  opacity: 0.1;
 }
 section.plans .titel_label {
   color: #fff;
@@ -504,7 +509,7 @@ section.advantages .item .label {
 
 section.testimonial {
   padding-top: 40px;
-  background-image: url(../img/istockphoto-469783940-612x612\ 1.png);
+  background: rgba(49, 1, 98, 0.8470588235);
   background-size: cover;
   position: relative;
   padding-bottom: 20px;
@@ -516,7 +521,7 @@ section.testimonial::before {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: rgba(49, 1, 98, 0.8470588235);
+  background-image: url(../img/testimonial.png);
   inset: 0;
   opacity: 0.8;
 }
@@ -587,6 +592,7 @@ section.testimonial .comment_preview .icon img {
 }
 section.testimonial .clients {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 40px;
   cursor: pointer;
