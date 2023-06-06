@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Almarai&display=swap");
 html,
 body {
@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Tajawal", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .absolute_center {
@@ -254,9 +254,9 @@ section.cover::before {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: #ff0000;
+  background: #1c0d68;
   inset: 0;
-  opacity: 0.2;
+  opacity: 0.8;
 }
 section.cover::after {
   content: "";
@@ -295,7 +295,7 @@ section.cover .container {
 section.cover .container h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 34px;
+  font-size: 45px;
   color: #fff;
 }
 section.cover .container h1 span.span1 {
@@ -308,7 +308,7 @@ section.cover .container h1 span.span2 {
 section.cover .container p {
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 18px;
   color: #fff;
 }
 section.cover .container .buttons-container {
@@ -964,8 +964,10 @@ footer .social_media .item.instagram {
   margin-left: 20px;
 }
 #whatsapp .wtp-container .wtp-body .item .logo-container img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #whatsapp .wtp-container .wtp-body .item .content {
   width: 100%;

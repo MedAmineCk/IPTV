@@ -6,7 +6,7 @@ $("#whatsapp .main-btn").on("click", function () {
 var conf = {
   accounts: [
     {
-      whatsapp: "447529430801",
+      whatsapp: "+13862605492",
       label: "Support Team",
       message: "Hello",
       logo: "./img/support.jpg",

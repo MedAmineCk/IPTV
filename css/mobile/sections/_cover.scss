@@ -17,9 +17,9 @@ section.cover {
         height: 100%;
         position: absolute;
         z-index: 1;
-        background: colors(sec);
+        background: #1c0d68;
         inset: 0;
-        opacity: 0.2;
+        opacity: 0.8;
     }
     &::after {
         content: "";
@@ -59,7 +59,7 @@ section.cover {
         h1 {
             font-style: normal;
             font-weight: bold;
-            font-size: 34px;
+            font-size: 45px;
             color: #fff;
 
             span {
@@ -76,7 +76,7 @@ section.cover {
         p {
             font-style: normal;
             font-weight: 300;
-            font-size: 24px;
+            font-size: 18px;
             color: #fff;
         }
 
